@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+int main()
+{
+    char a[100],r[100];
+    int length,middle,c=0,i,j;
+    scanf("%s",a);
+    length=strlen(a);
+    middle=length/2;
+    for(i=middle;i<strlen(a);i++)
+    {
+        r[c++]=a[i];
+    }
+    for(i=0;i<strlen(a);i++)
+    {
+        r[c++]=a[i];
+    }
+    for(i=0;i<strlen(a);i++)
+    {
+        c=0;
+        for(j=0;j<strlen(a);j++)
+        {
+            if(j<length-1)
+            {
+                printf(" ");
+            }
+            if(j>=length-1)
+            {
+                printf("%c",r[c++]);
+            }
+            
+            }
+            length--;
+            printf("\n");
+    }
+    
+
+    return 0;
+}
